@@ -37,6 +37,9 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->scalarNode('cache_dir')->cannotBeEmpty()->defaultValue('%kernel.cache_dir%/jbi_browscap')->end()
+                ->scalarNode('remote_ini_url')->end()
+                ->scalarNode('remote_ver_url')->end()
+                ->scalarNode('do_auto_update')->end()
             ->end();
 
         return $treeBuilder;

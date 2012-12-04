@@ -6,11 +6,19 @@
 
     <parameters>
         <parameter key="jbi_browscap.browscap.class">phpbrowscap\Browscap</parameter>
+        <parameter key="jbi_browscap.factory.class">Jbi\BrowscapBundle\BrowscapFactory</parameter>
     </parameters>
 
     <services>
-        <service id="jbi_browscap.browscap" class="%jbi_browscap.browscap.class%">
+        <service id="jbi_browscap.browscap"
+            class="%jbi_browscap.browscap.class%"
+            factory-class="%jbi_browscap.factory.class%"
+            factory-method="get"
+        >
             <argument>%jbi_browscap.cache_dir%</argument>
+            <argument>%jbi_browscap.remote_ini_url%</argument>
+            <argument>%jbi_browscap.remote_ver_url%</argument>
+            <argument>%jbi_browscap.do_auto_update%</argument>
         </service>
     </services>
 </container>

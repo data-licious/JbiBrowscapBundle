@@ -74,6 +74,9 @@ in YAML::
     # app/config.yml
     jbi_browscap:
         cache_dir: "%kernel.cache_dir%/browscap"
+        remote_ini_url: http://tempdownloads.browserscap.com/stream.php?BrowsCapINI
+        remote_ver_url: http://tempdownloads.browserscap.com/versions/version-date.php
+        do_auto_load: true
 
 Use the JbiBrowscapBundle library
 ==================================

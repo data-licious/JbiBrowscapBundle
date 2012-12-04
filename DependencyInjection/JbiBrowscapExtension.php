@@ -46,5 +46,9 @@ class JbiBrowscapExtension extends Extension
         }
 
         $container->setParameter('jbi_browscap.cache_dir', $cacheDir);
+        
+        $container->setParameter('jbi_browscap.remote_ini_url', isset($config['remote_ini_url'])?$config['remote_ini_url']:null);
+        $container->setParameter('jbi_browscap.remote_ver_url', isset($config['remote_ver_url'])?$config['remote_ver_url']:null);
+        $container->setParameter('jbi_browscap.do_auto_update', isset($config['do_auto_update'])?$config['do_auto_update']:null);
     }
 }
